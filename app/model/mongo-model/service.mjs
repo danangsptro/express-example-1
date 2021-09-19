@@ -1,18 +1,6 @@
-import mongoose from "mongoose"
+import mongoose from "../../config/mongodb.mjs";
+import { DataDiriSchema } from "../../schema/index.mjs";
 
-const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    }
-})
-const Service = mongoose.model("usertest", userSchema)
-export default Service;
+const Data = mongoose.model('service', DataDiriSchema);
+
+export default Data
