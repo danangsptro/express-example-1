@@ -45,7 +45,7 @@ const DataDiriController = {
         try {
             const id = req.params.id
             const { name, umur, alamat } = req.body
-            let { type } = req.body
+            const check = typeof name === "undefined" || name === null || name.length === 0 || typeof umur === "undefined" || umur === null || umur.length === 0 || typeof alamat === "undefined" || alamat === null || alamat.length === 0;
 
             const result = await DataDiri.findOneAndUpdate(
                 { _id: id },
@@ -55,7 +55,7 @@ const DataDiriController = {
                     alamat
                 }
             );
-            if (typeof umur === "undefined" || umur === null || umur.length === 0) {
+            if (check) {
                 res.json({
                     status: 400,
                     message: "erorr gan"
