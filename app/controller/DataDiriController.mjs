@@ -2,6 +2,10 @@ import DataDiri from "../model/mongo-model/service.mjs"
 
 const DataDiriController = {
 
+    testing(req,res){
+        res.render('index')
+    },
+
     async index(req, res) {
         try {
             const data = await DataDiri.find({})
