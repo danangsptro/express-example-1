@@ -55,12 +55,12 @@ const DataDiriController = {
                     alamat
                 }
             );
-            if (typeof type === 'undefined' || typeof type === null || typeof type === '') {
+            if (typeof umur === "undefined" || umur === null || umur.length === 0) {
                 res.json({
                     status: 400,
                     message: "erorr gan"
                 })
-            } else{
+            } else {
                 res.json({
                     status: 200,
                     message: "sukses gan",
