@@ -6,6 +6,10 @@ const DataDiriController = {
         res.render('../views/backend/page/masterBackend.ejs')
     },
 
+    testAja(req, res){
+        res.render('../views/backend/page/home.ejs')
+    },
+
     async index(req, res) {
         try {
             const data = await DataDiri.find({})
