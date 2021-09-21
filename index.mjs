@@ -16,6 +16,9 @@ const app = express();
 const PORT = process.env.APP_PORT
 const HOST = process.env.APP_HOST
 app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use(express.static(__dirname + '/app/public'));
+
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'ejs')
 // parse application/json

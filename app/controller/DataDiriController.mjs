@@ -3,7 +3,7 @@ import DataDiri from "../model/mongo-model/service.mjs"
 const DataDiriController = {
 
     testing(req,res){
-        res.render('index')
+        res.render('../views/backend/page/masterBackend.ejs')
     },
 
     async index(req, res) {
