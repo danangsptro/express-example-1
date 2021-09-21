@@ -1,9 +1,9 @@
 import express from "express"
-import DataDiriController from "../controller/DataDiriController.mjs"
+import DashboardController from "../controller/DashboardController.mjs"
 
 const route = express.Router()
 
-route.get("/", DataDiriController.testing)
-route.get("/Test", DataDiriController.testAja)
+route.get("/Test", DashboardController.testAja)
+route.get("/Testing", DashboardController.Hallo)
 
 export default route

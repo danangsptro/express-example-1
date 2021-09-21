@@ -1,15 +1,6 @@
 import DataDiri from "../model/mongo-model/service.mjs"
 
 const DataDiriController = {
-
-    testing(req,res){
-        res.render('../views/backend/page/masterBackend.ejs')
-    },
-
-    testAja(req, res){
-        res.render('../views/backend/page/home.ejs')
-    },
-
     async index(req, res) {
         try {
             const data = await DataDiri.find({})
