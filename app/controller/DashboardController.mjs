@@ -1,9 +1,12 @@
+import DataDiri from "../model/mongo-model/service.mjs"
+
 const DashboardController = {
-    Hallo (req, res){
-        res.render('../views/backend/page/dataDiri/index.ejs')
+    async getDataDiri(req, res) {
+        const data = await DataDiri.find({})
+        res.render('../views/backend/page/dataDiri/index.ejs', { datas: data })
     },
 
-    testAja(req, res){
+    dashboard(req, res) {
         res.render('../views/backend/page/home.ejs')
     },
 }
